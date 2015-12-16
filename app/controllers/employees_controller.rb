@@ -13,10 +13,7 @@ class EmployeesController < ApplicationController
       last_name: params[:last_name],
       email: params[:email]
     )
-    render json: {
-      id: @employee.id,
-      first_name: @employee.first_name
-    }
+    render :show
   end
 
   def update
